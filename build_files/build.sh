@@ -27,3 +27,6 @@ dnf5 install -y dms
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+mkdir -p /usr/lib/systemd/user/niri.service.wants
+ln -sf /usr/lib/systemd/user/dms.service /usr/lib/systemd/user/niri.service.wants/dms.service
